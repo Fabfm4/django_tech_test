@@ -25,7 +25,7 @@ SECRET_KEY = '#r()zhq+4q4zezfwx94^l7ll2dm@0vx&82h@!$9l%9i#ndsvkr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -131,6 +131,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.realpath(
+    os.path.join(BASE_DIR, '..', '..', 'media', 'assets')
+)
 
 # Django rest framework configuration
 REST_FRAMEWORK = {
